@@ -6,7 +6,10 @@
                 <a href="index">Trang Chủ</a>
             </li>
             <li class="menu">
-                <a href="danh_sach">Sản Phẩm</a>
+                <a href="danh_sach">Danh mục</a>
+            </li>
+            <li class="menu">
+                <a href="nha_sx">Nhà SX</a>
             </li>
             <li class="menu">
                 <a href="thong_tin">Thông Tin</a>

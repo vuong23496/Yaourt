@@ -20,7 +20,10 @@ Route::get('/index', function () {
 });
 
 Route::get('/danh_sach','LoaiSPController@show');
-Route::get('/loaisp-{idloai}','LoaiSPController@listLoaiSP');
+Route::get('/loaisp-{idloai}','LoaiSPController@showtheoloai');
+Route::get('/sanpham-{idsp}','SanPhamController@detail');
+Route::get('/nha_sx','nhasxcontroller@show_nha_sx' );
+Route::get('/nhasx-{idnhasx}','nhasxcontroller@show_sp_nha_sx' );
 Route::get('/thong_tin', function () {
     return view('thong_tin');
 });

@@ -6,27 +6,27 @@
                 <h1>Các Hương Vị Của Sữa Chua</h1>
             </div>
         </div>
-                <ul>
-                    @foreach($loaisps as $loaisp)
-                    <li>
-                        <h1><a href="loaisp-{{$loaisp->id}}">{{$loaisp->tenloai}}</a></h1>
-                    </li>
-                    @endforeach
-                </ul>
+        <ul>
+            @foreach($sanxuats as $sanxuat)
+                <li>
+                    <h1><a href="nhasx-{{$sanxuat->id}}">{{$sanxuat->tennhasx}}</a></h1>
+                </li>
+            @endforeach
+        </ul>
         <div>
             @foreach($sanphams as $sanpham)
             @endforeach
-                <ul>
+            <ul>
+                <li>
+                    <h1>{{$sanpham->tennhasx}}</h1>
+                </li>
+                @foreach($sanphams as $sanpham)
                     <li>
-                        <h1>{{$sanpham->tenloai}}</h1>
+                        <a href="sanpham-{{$sanpham->idSP}}" ><img src="images/kiwi.jpg" alt=""></a>
+                        <a href="sanpham-{{$sanpham->idSP}}" ><h2>{{$sanpham->tensp}}</h2></a>
                     </li>
-                 @foreach($sanphams as $sanpham)
-                        <li>
-                            <a href="sanpham-{{$sanpham->idSP}}" ><img src="images/kiwi.jpg" alt=""></a>
-                            <a href="sanpham-{{$sanpham->idSP}}" ><h2>{{$sanpham->tensp}}</h2></a>
-                        </li>
-                    @endforeach
-                </ul>
+                @endforeach
+            </ul>
         </div>
         <div class="col-sm-12">
             <ul class="pagination">

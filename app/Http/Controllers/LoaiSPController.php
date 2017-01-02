@@ -7,17 +7,19 @@ use DB;
 class LoaiSPController extends Controller
 {
     public function show(){
-        $loaisp=DB::table('loaisp')
-        ->get();
+        $loaisp=DB::select('select * from loaisp');
         return view('danh_sach',['loaisps'=>$loaisp]);
     }
-    public function listLoaiSP($idloai){
-        $sanpham=DB::table('sanpham')
-            ->join('loaisp','loaisp.id','sanpham.loaisanpham')
-            ->where('loaisp.id','like',$idloai)
+
+   public function showtheoloai($idloai){
+        $abc=DB::table('sanpham')
+            ->join('loaisp', 'loaisp.id', 'sanpham.loaisanpham' )
+            ->where('sanpham.loaisanpham','=',$idloai)
+            ->paginate (3);
+        $bcd=DB::table('loaisp')
             ->get();
-        $loaisp=DB::table('loaisp')
-            ->get();
-        return view('loaisp',['sanphams'=>$sanpham,'loaisps'=>$loaisp]);
-    }
+         return view('loaisp',['sanphams'=>$abc,'loaisps'=>$bcd]);
+            
+
+   }
 }

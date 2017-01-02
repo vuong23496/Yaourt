@@ -9,18 +9,16 @@
         <div class="singlepost">
             <div class="featured">
                 <img src="images/kiwi.jpg" alt="">
-                <h1>Sữa Chua Hương Kiwi</h1>
+                @foreach($sanpham as $sanpham)
+                <h1>{{$sanpham->tensp}}</h1>
                 <h3>Thành Phần</h3>
-                <p> gồm sữa chua lên men tự nhiên, hương trái kiwi, đường mía, một số chất phụ gia khác</br></p>
-                <p>sau khi mua sản phẩm bạn sẽ được tặng một trái dâu tây ăn kèm</br></p>
-                <h3>Các loại size</h3>
-                <p> Hộp 150gr&nbsp;&nbsp;&nbsp;&nbsp;Giá: <b>25.000 Đ</b></p>
-                <p> Hộp 350gr&nbsp;&nbsp;&nbsp;&nbsp;Giá: <b>50.000 Đ</b></p>
-                <p> Hộp 750gr&nbsp;&nbsp;&nbsp;&nbsp;Giá: <b>100.000 Đ</b></p>
+                <p> {{$sanpham->motachitiet}}</p>
+                <h3>GIá</h3>
+                <p>{{$sanpham->giasp}}</p>
                 <h3>Bảo Quản</h3>
                 <p>Bảo quản ở nhiệt từ 0->20 độ</p>
-                <a href="danh_sach.html" class="load">Xem Sản Phẩm</a>
-
+                <a href="danh_sach" class="load">Xem Sản Phẩm</a>
+                @endforeach
             </div>
             <div class="sidebar">
                 <h1>Recent Posts</h1>
