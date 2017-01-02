@@ -1,10 +1,6 @@
-@extends('layouts.app')
+@extends('layouts.master')
 @section('content')
     <div id="body" class="home">
-        <?php
-             mysql_connect(localhost,'root','')
-
-            ?>
         <div class="header">
             <img src="images/bg-home.jpg" alt="">
             <div>

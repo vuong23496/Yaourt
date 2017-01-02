@@ -11,38 +11,12 @@
 </head>
 <body>
 <div id="page">
-    <div id="header">
-        <div>
-            <a href="index.html" class="logo"><img src="images/logo.png" alt=""></a>
-            <ul id="navigation">
-                <li class="selected">
-                    <a href="index.html">Trang Chủ</a>
-                </li>
-                <li class="menu">
-                    <a href="danh_sach.html">Sản Phẩm</a>
-                </li>
-                <li class="menu">
-                    <a href="thong_tin.html">Thông Tin</a>
-                </li>
-                <li>
-                    <a href="lien_he.html">Liên Hệ</a>
-                </li>
-            </ul>
-        </div>
-    </div>
+    @include('Menu.header')
 </div>
 @section('content')
-    @show
-<div id="footer">
-    <div>
-        <div class="connect">
-            <a href="http://freewebsitetemplates.com/go/facebook/" class="facebook">facebook</a>
-            <a href="http://freewebsitetemplates.com/go/twitter/" class="twitter">twitter</a>
-            <a href="http://freewebsitetemplates.com/go/googleplus/" class="googleplus">googleplus</a>
-            <a href="http://pinterest.com/fwtemplates/" class="pinterest">pinterest</a>
-        </div>
-    </div>
-</div>
-</div>
+@show
+
+@include('Menu.footer')
+
 </body>
 </html>
